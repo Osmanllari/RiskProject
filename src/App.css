@@ -1,0 +1,139 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.login-container {
+  max-width: 400px;
+  padding: 20px;
+  background-color: #2a4aca;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(241, 224, 224, 0.1);
+}
+
+.login-header, .login-footer {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+input {
+  font-family: 'Arial', sans-serif; /* Primer atraktivnijeg fonta */
+  padding: 10px;
+  margin: 5px 0;
+  border: 2px solid #2495d6; /* Plava ivica */
+  border-radius: 5px; /* Zaobljene ivice */
+  outline: none; /* Uklanja plavi outline prilikom fokusiranja */
+  
+}
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0258b4;
+}
+
+body {
+  background-color: #92ccdf; /* Blue background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.form-container {
+  background-color: #ffffff; /* White background for the container */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  background-color: #479ae3; /* Orange background for buttons */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #1971cf; /* Darker shade of orange on hover */
+}
+
+
+.dugmehp {
+  text-align: center; /* Centrira sadržaj unutar diva */
+}
+
+.dugmehp button {
+  background-color: #155698; /* Tamno plava boja za dugmiće */
+  color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dugmehp button:hover {
+  background-color: #6e9fd0; /* Tamnija nijansa plave za hover efekat */
+}
