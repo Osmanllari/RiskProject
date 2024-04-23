@@ -1,0 +1,74 @@
+/* CreateAccount.css */
+
+/* Container styling */
+.form-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Added box shadow for a subtle effect */
+}
+
+/* Form styling */
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 20px; /* Increased margin for better separation */
+}
+
+/* Label styling */
+label {
+  font-weight: bold;
+  color: #333; /* Changed label color for better readability */
+}
+
+/* Input field styling */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease; /* Added smooth transition effect */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+  border-color: #007bff; /* Highlight input field on focus */
+}
+
+/* Login button styling */
+button.login-button {
+  padding: 12px 20px; /* Increased padding for better button appearance */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Added smooth transition effect */
+}
+
+button.login-button:hover {
+  background-color: #0056b3; /* Darken button color on hover */
+}
+
+/* Create account link styling */
+.create-account-link {
+  margin-top: 20px; /* Increased margin for better separation */
+  font-size: 16px; /* Increased font size for better visibility */
+  text-align: center; /* Center align the link */
+}
+
+.create-account-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.create-account-link a:hover {
+  text-decoration: underline;
+}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import './Login.css'; // Import CSS file
 
 function Login() {
   const [username, setUsername] = useState('');
@@ -34,18 +35,18 @@ function Login() {
 
   return (
     <div className='form-container'>
-      <form onSubmit={handleSubmit}>
-        <div>
+      <form onSubmit={handleSubmit} className="login-form"> {/* Apply a class to the form */}
+        <div className="form-group"> {/* Apply a class to the form group */}
           <label htmlFor="username">Username:</label>
           <input id="username" type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
         </div>
-        <div>
+        <div className="form-group"> {/* Apply a class to the form group */}
           <label htmlFor="password">Password:</label>
           <input id="password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </div>
-        <button type="submit">Login</button>
+        <button type="submit" className="login-button">Login</button> {/* Apply a class to the button */}
       </form>
-      <p>Don't have an account? <Link to="/create-account">Create Account</Link></p>
+      <p className="create-account-link">Don't have an account? <Link to="/create-account">Create Account</Link></p> {/* Apply a class to the link */}
     </div>
   );
 }
