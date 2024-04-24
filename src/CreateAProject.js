@@ -22,7 +22,7 @@ function CreateAProject() {
     });
 
     if (response.ok) {
-      navigate(-1); // Go back to the previous page
+      navigate(`/homepage/${username}`); // Navigate to the homepage with the username
     } else {
       alert('There was an error'); // Handle error
     }
@@ -41,11 +41,11 @@ function CreateAProject() {
         <textarea id="project-description" name="project-description"></textarea>
         <br />
         <button type="submit">Submit</button>
-        {/* Pass the username as a parameter */}
-        <Link to={`/homepage/${username}`}>
-          <button type="button">Back to Home</button>
-        </Link>
       </form>
+      {/* Pass the username as a parameter */}
+      <Link to={`/homepage/${username}`}>
+        <button type="button">Back to Home</button>
+      </Link>
     </div>
   );
 }
