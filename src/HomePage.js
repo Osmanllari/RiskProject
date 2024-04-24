@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import './HomePage.css'; // Import CSS file for styling
 
 function HomePage() {
   const [projects, setProjects] = useState([]);
@@ -20,6 +21,14 @@ function HomePage() {
 
   const toggleModal = () => setShowModal(!showModal);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Add your logic for submitting the form data
+    console.log('Form submitted!');
+    // Close the modal after form submission
+    toggleModal();
+  };
+
   return (
     <div className='dugmehp'>
       <div>
@@ -37,15 +46,17 @@ function HomePage() {
       </div>
       <button onClick={toggleModal}>Chat</button>
       <Link to="/create-a-project"><button>Create a Project</button></Link>
-      {showModal && (
-        <div className="modal">
-          <div className="modal-content">
-            <span className="close" onClick={toggleModal}>&times;</span>
+      {/* Popup */}
+      <div className="popup" style={{ display: showModal ? 'block' : 'none' }}>
+        <div className="popup-content">
+          <span className="close" onClick={toggleModal}>&times;</span>
+          <form onSubmit={handleSubmit}>
             <label htmlFor="commentInput">Leave a comment:</label>
             <input type="text" id="commentInput" name="comment" />
-          </div>
+            <button type="submit" className="submit-button">Submit</button>
+          </form>
         </div>
-      )}
+      </div>
     </div>
   );
 }

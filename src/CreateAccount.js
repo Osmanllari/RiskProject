@@ -21,7 +21,7 @@ function CreateAccount() {
 
       if (response.ok) {
         alert('Account created successfully!');
-        navigate('/login'); // Redirect to login page after account creation
+        navigate('/'); // Redirect to login page after account creation
       } else {
         const data = await response.json();
         alert(`Account creation failed: ${data.error}`);
