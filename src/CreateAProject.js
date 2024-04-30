@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import './CreateAProject.css'; // Import CSS file for styling
 
 function CreateAProject() {
   const [username, setUsername] = useState('');
@@ -8,7 +9,7 @@ function CreateAProject() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = {
-      user: username, // Use the username state variable
+      user: username,
       projectTitle: e.target.elements['project-title'].value,
       projectDescription: e.target.elements['project-description'].value,
     };
@@ -22,29 +23,36 @@ function CreateAProject() {
     });
 
     if (response.ok) {
-      navigate(`/homepage/${username}`); // Navigate to the homepage with the username
+      navigate(`/homepage/${username}`);
     } else {
-      alert('There was an error'); // Handle error
+      alert('There was an error');
     }
   };
 
   return (
-    <div className="project-form">
-      <form onSubmit={handleSubmit}>
-        <label>Your username:</label>
-        <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
-        <br />
+    <div className="project-form-container">
+      <h2>Create a New Project</h2>
+      <form className="project-form" onSubmit={handleSubmit}>
+        <label htmlFor="username">Your username:</label>
+        <input
+          type="text"
+          id="username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          placeholder="Enter your username"
+        />
         <label htmlFor="project-title">Project Title:</label>
-        <input type="text" id="project-title" name="project-title" />
-        <br />
+        <input type="text" id="project-title" name="project-title" placeholder="Enter project title" />
         <label htmlFor="project-description">Project Description:</label>
-        <textarea id="project-description" name="project-description"></textarea>
-        <br />
-        <button type="submit">Submit</button>
+        <textarea
+          id="project-description"
+          name="project-description"
+          placeholder="Enter project description"
+        ></textarea>
+        <button type="submit" className="submit-button">Submit</button>
       </form>
-      {/* Pass the username as a parameter */}
-      <Link to={`/homepage/${username}`}>
-        <button type="button">Back to Home</button>
+      <Link to={`/homepage/${username}`} className="back-link">
+        <button type="button" className="back-button">Back to Home</button>
       </Link>
     </div>
   );
